@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: light;
+    --laundry-ink: #142b45;
+    --laundry-blue: #087eae;
+    --laundry-blue-dark: #07658d;
+    --laundry-mint: #e8f7f5;
+    --laundry-surface: #f4f8fb;
+}
+
+html {
+    scroll-padding-top: 5rem;
+}
+
+body {
+    color: var(--laundry-ink);
+    background: var(--laundry-surface);
+    font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+    color: #fff;
+    background: var(--laundry-blue);
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+input,
+select,
+textarea {
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    --tw-ring-color: rgb(8 126 174 / 18%);
+}
+
+.app-shell {
+    background:
+        radial-gradient(ellipse at 5% 0%, rgb(222 243 250 / 42%), transparent 32rem),
+        var(--laundry-surface);
+}
+
+.app-page-header {
+    position: relative;
+    overflow: hidden;
+    border-color: #e4edf3;
+    background: rgb(255 255 255 / 92%);
+    box-shadow: 0 8px 26px rgb(23 53 77 / 3%);
+}
+
+.app-page-header::after {
+    position: absolute;
+    right: -2.5rem;
+    bottom: -5rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 9999px;
+    background: rgb(224 245 250 / 48%);
+    content: "";
+    pointer-events: none;
+}
+
+.app-navigation {
+    position: relative;
+    z-index: 20;
+    border-color: #e5eef4;
+    background: rgb(255 255 255 / 94%);
+    box-shadow: 0 4px 18px rgb(23 53 77 / 4%);
+    backdrop-filter: blur(14px);
+}
+
+.app-navigation a,
+.public-navigation a {
+    text-decoration: none;
+}
+
+.app-brand-mark {
+    box-shadow: 0 7px 16px rgb(8 126 174 / 20%);
+}
+
+.public-navigation {
+    border-color: #e7eef3;
+    box-shadow: 0 4px 20px rgb(23 53 77 / 5%);
+}
+
+.public-footer {
+    background:
+        radial-gradient(ellipse at 80% 0%, rgb(8 126 174 / 28%), transparent 27rem),
+        #10283e;
+}
+
+.contact-card {
+    background:
+        radial-gradient(ellipse at 92% 8%, rgb(31 163 186 / 24%), transparent 21rem),
+        linear-gradient(130deg, #10283e, #153d59);
+    box-shadow: 0 24px 54px rgb(16 40 62 / 18%);
+}
+
+.landing-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 80% 20%, rgb(132 229 226 / 32%), transparent 22rem),
+        radial-gradient(ellipse at 5% 100%, rgb(47 166 202 / 42%), transparent 30rem),
+        linear-gradient(125deg, #075b85 0%, #087eae 54%, #22a8bd 100%);
+}
+
+.landing-hero::before,
+.landing-hero::after {
+    position: absolute;
+    z-index: -1;
+    border: 1px solid rgb(255 255 255 / 13%);
+    border-radius: 9999px;
+    content: "";
+}
+
+.landing-hero::before {
+    top: -17rem;
+    right: -8rem;
+    width: 42rem;
+    height: 42rem;
+}
+
+.landing-hero::after {
+    right: 12%;
+    bottom: -23rem;
+    width: 36rem;
+    height: 36rem;
+}
+
+.landing-art-card {
+    position: relative;
+    width: min(100%, 22rem);
+    min-height: 20rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid rgb(255 255 255 / 26%);
+    border-radius: 2rem;
+    background: linear-gradient(145deg, rgb(255 255 255 / 22%), rgb(255 255 255 / 8%));
+    box-shadow: 0 28px 70px rgb(5 42 67 / 24%), inset 0 1px rgb(255 255 255 / 28%);
+    backdrop-filter: blur(12px);
+}
+
+.landing-art-card::before,
+.landing-art-card::after {
+    position: absolute;
+    border-radius: 9999px;
+    background: rgb(255 255 255 / 11%);
+    content: "";
+}
+
+.landing-art-card::before {
+    top: -4rem;
+    right: -3rem;
+    width: 13rem;
+    height: 13rem;
+}
+
+.landing-art-card::after {
+    bottom: -5rem;
+    left: -3rem;
+    width: 15rem;
+    height: 15rem;
+}
+
+.landing-card,
+.landing-price-card,
+.customer-order-card {
+    border: 1px solid #e6eef3;
+    box-shadow: 0 12px 30px rgb(23 53 77 / 5%);
+}
+
+.landing-card:hover,
+.landing-price-card:hover,
+.customer-order-card:hover {
+    border-color: #c9e6ef;
+    box-shadow: 0 18px 36px rgb(23 89 119 / 10%);
+}
+
+.landing-price-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.customer-welcome {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 94% 10%, rgb(162 239 223 / 24%), transparent 15rem),
+        linear-gradient(120deg, #075b85, #087eae 65%, #1a9baf);
+    box-shadow: 0 22px 48px rgb(7 91 133 / 18%);
+}
+
+.customer-welcome::after {
+    position: absolute;
+    z-index: -1;
+    right: -4rem;
+    bottom: -11rem;
+    width: 24rem;
+    height: 24rem;
+    border: 1px solid rgb(255 255 255 / 17%);
+    border-radius: 9999px;
+    content: "";
+}
+
+.customer-stat-card {
+    border: 1px solid #e5eef3;
+    background: rgb(255 255 255 / 92%);
+    box-shadow: 0 10px 24px rgb(23 53 77 / 4%);
+}
+
+.customer-order-card {
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.customer-order-card:hover {
+    transform: translateY(-2px);
+}
+
+.admin-panel,
+.admin-table,
+.tracking-card {
+    border: 1px solid #e5eef3;
+    box-shadow: 0 12px 30px rgb(23 53 77 / 5%);
+}
+
+.admin-table thead {
+    background: #f5f9fb;
+}
+
+.admin-table tbody tr {
+    transition: background-color 150ms ease;
+}
+
+.auth-shell {
+    background:
+        radial-gradient(ellipse at 10% 12%, rgb(191 232 243 / 50%), transparent 28rem),
+        radial-gradient(ellipse at 90% 90%, rgb(210 244 234 / 56%), transparent 25rem),
+        #f4f8fb;
+}
+
+.auth-card {
+    border: 1px solid #e5eef3;
+    border-radius: 1.25rem;
+    box-shadow: 0 24px 60px rgb(23 53 77 / 10%);
+}
+
+.public-section-title {
+    color: var(--laundry-ink);
+    letter-spacing: -0.035em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .landing-art-card {
+        animation: laundry-float 6s ease-in-out infinite;
+    }
+
+    @keyframes laundry-float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+    }
+}
+
+@media (max-width: 640px) {
+    .landing-art-card {
+        min-height: 15rem;
+    }
+}
